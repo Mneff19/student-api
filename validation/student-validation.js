@@ -28,7 +28,7 @@ validate.studentRules = () => {
         body("credits")
         .notEmpty()
         .isInt()
-        .withMessage("Please provide a valid credits."), // on error this message is sent.
+        .withMessage("Please provide a valid credit amounts."), // on error this message is sent.
 
         body("onCampusHousing")
         .notEmpty()
@@ -64,7 +64,7 @@ validate.checkStudentData = async (req, res, next) => {
         })
         return;
     }
-    
+
     next();
 }
 

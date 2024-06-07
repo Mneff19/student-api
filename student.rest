@@ -1,5 +1,8 @@
 // Local
 
+//
+// Students
+//
 # GET operations
 ### All students
 GET http://localhost:8080/students/
@@ -48,6 +51,50 @@ GET http://localhost:8080/students/666269995f53f0a24c2679ak
 
 ### Specific contact DELETE error
 DELETE http://localhost:8080/students/666269995f53f0a24c2679ak
+
+
+//
+// Classes
+//
+# GET operations
+### All classes
+GET http://localhost:8080/classes/
+
+### Specific contact
+GET http://localhost:8080/classes/666288d51dfffa1ecf1613cd
+
+# POST operations
+### New contact
+POST http://localhost:8080/classes/
+content-type: application/json
+
+{
+    "className": "Chem 101",
+    "topic": "Science",
+    "studentsEnrolled": 100,
+    "credits": 3
+}
+
+### Update contact
+PUT http://localhost:8080/classes/666288d51dfffa1ecf1613cd
+content-type: application/json
+
+{
+    "className": "Bio 301",
+    "topic": "Science",
+    "studentsEnrolled": 10,
+    "credits": 4
+}
+
+### Delete contact
+DELETE http://localhost:8080/classes/666288d51dfffa1ecf1613cd
+
+# ERRORS
+### Specific contact GET error
+GET http://localhost:8080/classes/666269995f53f0a24c2679ak
+
+### Specific contact DELETE error
+DELETE http://localhost:8080/classes/666269995f53f0a24c2679ak
 
 
 # Production
