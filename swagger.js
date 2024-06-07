@@ -5,9 +5,8 @@ const doc = {
     title: 'Students API',
     description: 'A simple API built using Express and MongoDB that demonstrates security best practices.'
   },
-  host: 'localhost:8080',
+  host: 'student-api-ydrp.onrender.com',
   schemes: [
-    "http",
     "https"
   ],
 };
