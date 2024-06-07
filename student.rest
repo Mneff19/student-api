@@ -1,0 +1,57 @@
+// Local
+
+# GET operations
+### All students
+GET http://localhost:8080/students/
+
+### Specific contact
+GET http://localhost:8080/students/666269995f53f0a24c2679a2
+
+# POST operations
+### New contact
+POST http://localhost:8080/students/
+content-type: application/json
+
+{
+    "firstName": "Joe",
+    "lastName": "Student",
+    "gpa": 3.26,
+    "credits": 20,
+    "onCampusHousing": true,
+    "club": "baseball",
+    "privateInsurance": false
+}
+
+### Update contact
+PUT http://localhost:8080/students/666269995f53f0a24c2679a2
+content-type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Student",
+    "gpa": 3.76,
+    "credits": 78,
+    "onCampusHousing": true,
+    "club": "hockey",
+    "privateInsurance": true
+}
+
+### Delete contact
+DELETE http://localhost:8080/students/66627ed90aeb1cb0030bfdcd
+
+# ERRORS
+### General 404 error
+GET http://localhost:8080/abc_xyz/
+
+### Specific contact GET error
+GET http://localhost:8080/students/666269995f53f0a24c2679ak
+
+### Specific contact DELETE error
+DELETE http://localhost:8080/students/666269995f53f0a24c2679ak
+
+
+# Production
+
+# GET operations
+GET https://students-api-62e2.onrender.com/students/                          # All students
+GET https://students-api-62e2.onrender.com/students/6661ac592d7a03ab5028aba4  # Specific contact
