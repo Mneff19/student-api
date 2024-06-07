@@ -5,10 +5,9 @@
     "description": "A simple API built using Express and MongoDB that demonstrates security best practices.",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "student-api-ydrp.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
