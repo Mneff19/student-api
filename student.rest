@@ -7,11 +7,11 @@
 ### All students
 GET http://localhost:8080/students/
 
-### Specific contact
+### Specific student
 GET http://localhost:8080/students/666269995f53f0a24c2679a2
 
 # POST operations
-### New contact
+### New student
 POST http://localhost:8080/students/
 content-type: application/json
 
@@ -25,7 +25,7 @@ content-type: application/json
     "privateInsurance": false
 }
 
-### Update contact
+### Update student
 PUT http://localhost:8080/students/666269995f53f0a24c2679a2
 content-type: application/json
 
@@ -39,14 +39,14 @@ content-type: application/json
     "privateInsurance": true
 }
 
-### Delete contact
+### Delete student
 DELETE http://localhost:8080/students/66627ed90aeb1cb0030bfdcd
 
 # ERRORS
 ### General 404 error
 GET http://localhost:8080/abc_xyz/
 
-### Specific contact GET error
+### Specific student GET error
 GET http://localhost:8080/students/666269995f53f0a24c2679ak
 
 ### Specific contact DELETE error
@@ -60,11 +60,11 @@ DELETE http://localhost:8080/students/666269995f53f0a24c2679ak
 ### All classes
 GET http://localhost:8080/classes/
 
-### Specific contact
+### Specific class
 GET http://localhost:8080/classes/666288d51dfffa1ecf1613cd
 
 # POST operations
-### New contact
+### New class
 POST http://localhost:8080/classes/
 content-type: application/json
 
@@ -75,7 +75,7 @@ content-type: application/json
     "credits": 3
 }
 
-### Update contact
+### Update class
 PUT http://localhost:8080/classes/666288d51dfffa1ecf1613cd
 content-type: application/json
 
@@ -86,19 +86,118 @@ content-type: application/json
     "credits": 4
 }
 
-### Delete contact
+### Delete class
 DELETE http://localhost:8080/classes/666288d51dfffa1ecf1613cd
 
 # ERRORS
-### Specific contact GET error
+### Specific class GET error
 GET http://localhost:8080/classes/666269995f53f0a24c2679ak
 
-### Specific contact DELETE error
+### Specific class DELETE error
 DELETE http://localhost:8080/classes/666269995f53f0a24c2679ak
+
+
+
+
+
+
+
 
 
 # Production
 
+//
+// Students
+//
 # GET operations
-GET https://students-api-62e2.onrender.com/students/                          # All students
-GET https://students-api-62e2.onrender.com/students/6661ac592d7a03ab5028aba4  # Specific contact
+### All students
+GET https://students-api-62e2.onrender.com/students/
+
+### Specific student
+GET https://students-api-62e2.onrender.com/students/666269995f53f0a24c2679a2
+
+# POST operations
+### New student
+POST https://students-api-62e2.onrender.com/students/
+content-type: application/json
+
+{
+    "firstName": "Joe",
+    "lastName": "Student",
+    "gpa": 3.26,
+    "credits": 20,
+    "onCampusHousing": true,
+    "club": "baseball",
+    "privateInsurance": false
+}
+
+### Update student
+PUT https://students-api-62e2.onrender.com/students/666269995f53f0a24c2679a2
+content-type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Student",
+    "gpa": 3.76,
+    "credits": 78,
+    "onCampusHousing": true,
+    "club": "hockey",
+    "privateInsurance": true
+}
+
+### Delete student
+DELETE https://students-api-62e2.onrender.com/students/66627ed90aeb1cb0030bfdcd
+
+# ERRORS
+### General 404 error
+GET https://students-api-62e2.onrender.com/abc_xyz/
+
+### Specific student GET error
+GET https://students-api-62e2.onrender.com/students/666269995f53f0a24c2679ak
+
+### Specific contact DELETE error
+DELETE https://students-api-62e2.onrender.com/students/666269995f53f0a24c2679ak
+
+
+//
+// Classes
+//
+# GET operations
+### All classes
+GET https://students-api-62e2.onrender.com/classes/
+
+### Specific class
+GET https://students-api-62e2.onrender.com/classes/666288d51dfffa1ecf1613cd
+
+# POST operations
+### New class
+POST https://students-api-62e2.onrender.com/classes/
+content-type: application/json
+
+{
+    "className": "Chem 101",
+    "topic": "Science",
+    "studentsEnrolled": 100,
+    "credits": 3
+}
+
+### Update class
+PUT https://students-api-62e2.onrender.com/classes/666288d51dfffa1ecf1613cd
+content-type: application/json
+
+{
+    "className": "Bio 301",
+    "topic": "Science",
+    "studentsEnrolled": 10,
+    "credits": 4
+}
+
+### Delete class
+DELETE https://students-api-62e2.onrender.com/classes/666288d51dfffa1ecf1613cd
+
+# ERRORS
+### Specific class GET error
+GET https://students-api-62e2.onrender.com/classes/666269995f53f0a24c2679ak
+
+### Specific class DELETE error
+DELETE https://students-api-62e2.onrender.com/classes/666269995f53f0a24c2679ak
